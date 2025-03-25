@@ -1,14 +1,26 @@
 import Lottie from 'lottie-react';
 import React from 'react';
 import lotLogin from '../../assets/signIn.json'
+import UseAuth from '../../Hooks/UseAuth';
 
 const Login = () => {
+    const {loginUser} = UseAuth();
+
+
     const handleSubmit=(e) =>{
             e.preventDefault();
             const form = e.target;
             const email = form.email.value;
             const password = form.password.value;
-            console.log(email, password)
+            console.log(email, password);
+
+            loginUser(email, password)
+            .then(result =>{
+                console.log(result);
+            }).catch(error=>{
+                console.log(error)
+            })
+
     }
     return (
         <div className="hero bg-base-200 min-h-screen">
