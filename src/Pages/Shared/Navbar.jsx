@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import UseAuth from '../../Hooks/UseAuth';
+import logo from '../../assets/icon.png'
 
 const Navbar = () => {
 
     const {user,singOutUser} = UseAuth();
     const links = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink to={'/allFoods'}>All Foods</NavLink></li>
+        <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
+     
     </>
 
     const handleSingOut=()=>{
@@ -31,7 +34,8 @@ const Navbar = () => {
                        {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Mz Restaurant</a>
+                <a className="btn btn-ghost text-xl"> <img className='w-8' src={logo} alt="" /> Mz Restaurant </a>
+                
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -42,8 +46,8 @@ const Navbar = () => {
                 <div>
                     {
                         user ? <button onClick={handleSingOut}>SignOut</button> : <><div>
-                        <Link to={"/login"} className="btn">Login</Link>
-                        <Link to={"/register"} className="btn">Register</Link>
+                        <Link to={"/login"} className="btn mr-2 bg-green-500 text-white">Login</Link>
+                        <Link to={"/register"} className="btn bg-red-500 text-white">Register</Link>
                         </div></>
                     }
                 </div>
