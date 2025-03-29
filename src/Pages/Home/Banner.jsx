@@ -90,7 +90,7 @@ const Banner = () => {
             <div className="text-center text-white z-10 px-6">
             <div> <img className="w-full h-[300px] rounded-full" src={img4} alt="" /></div>
               <h1 className="text-4xl md:text-5xl font-bold">
-                A Taste of Life 4
+                A Taste of Life 
               </h1>
               <p className="mt-2 text-lg md:text-xl">
                 Experience good and best food.

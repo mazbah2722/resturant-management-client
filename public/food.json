@@ -1,0 +1,163 @@
+[
+    {
+      "foodName": "Margherita Pizza",
+      "foodImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmomF1DksRYo9MLTC6zi2qx1XjX7R5PSqPYQ&s",
+      "foodCategory": "Pizza",
+      "quantity": 10,
+      "price": 12.99,
+      "addedBy": {
+        "name": "John Doe",
+        "email": "john@example.com"
+      },
+      "foodOrigin": "Italy",
+      "description": {
+        "ingredients": "Flour, Tomato, Mozzarella, Basil, Olive Oil",
+        "makingProcedure": "Prepare dough, add toppings, bake in oven."
+      }
+    },
+    {
+      "foodName": "Sushi",
+      "foodImage": "https://www.justonecookbook.com/wp-content/uploads/2020/01/Sushi-Rolls-Maki-Sushi-%E2%80%93-Hosomaki-1106-II.jpg",
+      "foodCategory": "Japanese",
+      "quantity": 15,
+      "price": 18.99,
+      "addedBy": {
+        "name": "Jane Smith",
+        "email": "jane@example.com"
+      },
+      "foodOrigin": "Japan",
+      "description": {
+        "ingredients": "Rice, Fish, Seaweed, Soy Sauce",
+        "makingProcedure": "Roll sushi with ingredients, slice, and serve."
+      }
+    },
+    {
+      "foodName": "Tacos",
+      "foodImage": "https://www.onceuponachef.com/images/2023/08/Beef-Tacos.jpg",
+      "foodCategory": "Mexican",
+      "quantity": 20,
+      "price": 9.99,
+      "addedBy": {
+        "name": "Carlos Lopez",
+        "email": "carlos@example.com"
+      },
+      "foodOrigin": "Mexico",
+      "description": {
+        "ingredients": "Tortilla, Meat, Lettuce, Cheese, Salsa",
+        "makingProcedure": "Fill tortilla with ingredients, fold, and serve."
+      }
+    },
+    {
+      "foodName": "Butter Chicken",
+      "foodImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQfysu3jzv-y7psPTFkWdSQpZPFyr0qjd3jw&s",
+      "foodCategory": "Curry",
+      "quantity": 12,
+      "price": 14.99,
+      "addedBy": {
+        "name": "Amit Kumar",
+        "email": "amit@example.com"
+      },
+      "foodOrigin": "India",
+      "description": {
+        "ingredients": "Chicken, Tomato, Cream, Butter, Spices",
+        "makingProcedure": "Cook chicken in sauce with spices and butter."
+      }
+    },
+    {
+      "foodName": "Burger",
+      "foodImage": "https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg",
+      "foodCategory": "Fast Food",
+      "quantity": 25,
+      "price": 7.99,
+      "addedBy": {
+        "name": "Emma Wilson",
+        "email": "emma@example.com"
+      },
+      "foodOrigin": "United States",
+      "description": {
+        "ingredients": "Bun, Patty, Lettuce, Tomato, Cheese",
+        "makingProcedure": "Grill patty, assemble ingredients, and serve."
+      }
+    },
+    {
+      "foodName": "Paella",
+      "foodImage": "https://res.cloudinary.com/tienda-com/image/upload/f_auto/q_auto/c_fill,w_742/dpr_2.0/v1/recipes/mixed-seafood-paella",
+      "foodCategory": "Rice Dish",
+      "quantity": 10,
+      "price": 19.99,
+      "addedBy": {
+        "name": "Pedro Gonzalez",
+        "email": "pedro@example.com"
+      },
+      "foodOrigin": "Spain",
+      "description": {
+        "ingredients": "Rice, Seafood, Saffron, Vegetables",
+        "makingProcedure": "Cook rice with seafood and spices."
+      }
+    },
+    {
+      "foodName": "Dim Sum",
+      "foodImage": "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/prawnporkandvegetabl_88714_16x9.jpg",
+      "foodCategory": "Chinese",
+      "quantity": 30,
+      "price": 13.49,
+      "addedBy": {
+        "name": "Li Wei",
+        "email": "li@example.com"
+      },
+      "foodOrigin": "China",
+      "description": {
+        "ingredients": "Dough, Meat, Vegetables, Soy Sauce",
+        "makingProcedure": "Steam or fry dumplings with fillings."
+      }
+    },
+    {
+      "foodName": "Croissant",
+      "foodImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIpqUKeuhR2q6JlrcAsZKsLdFLilHWlAyhA&s",
+      "foodCategory": "Bakery",
+      "quantity": 40,
+      "price": 3.99,
+      "addedBy": {
+        "name": "Sophie Martin",
+        "email": "sophie@example.com"
+      },
+      "foodOrigin": "France",
+      "description": {
+        "ingredients": "Flour, Butter, Sugar, Yeast",
+        "makingProcedure": "Layer dough with butter, bake until golden."
+      }
+    },
+    {
+      "foodName": "Shawarma",
+      "foodImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm58PkxAsZc14nzdlhjp1zLpdW6MaFsSi8Mw&s",
+      "foodCategory": "Middle Eastern",
+      "quantity": 18,
+      "price": 10.49,
+      "addedBy": {
+        "name": "Omar Hassan",
+        "email": "omar@example.com"
+      },
+      "foodOrigin": "Middle East",
+      "description": {
+        "ingredients": "Meat, Pita Bread, Garlic Sauce, Vegetables",
+        "makingProcedure": "Grill meat, wrap in pita with toppings."
+      }
+    },
+    {
+      "foodName": "Pasta Carbonara",
+      "foodImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvEyKupBrsob08S9KIBxKXxzCDn0mxsxUPCg&s",
+      "foodCategory": "Pasta",
+      "quantity": 14,
+      "price": 11.99,
+      "addedBy": {
+        "name": "Luca Rossi",
+        "email": "luca@example.com"
+      },
+      "foodOrigin": "Italy",
+      "description": {
+        "ingredients": "Pasta, Eggs, Cheese, Bacon, Black Pepper",
+        "makingProcedure": "Cook pasta, mix with sauce and bacon."
+      }
+    }
+  ]
+  
