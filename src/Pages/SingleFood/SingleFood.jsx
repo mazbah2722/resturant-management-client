@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const SingleFood = () => {
-  const {foodName,foodImage,quantity,price,description} = useLoaderData();
+  const {_id,foodName,foodImage,quantity,price,description} = useLoaderData();
 
   return (
     <div className='p-10 bg-gray-100 my-10 rounded-2xl'>
@@ -13,7 +13,7 @@ const SingleFood = () => {
       <p className='text-lg font-semibold mt-2'>Ingredients: {description.ingredients}</p>
       <p className='text-lg font-semibold mt-2'>MakingProcedure: {description.makingProcedure}</p>
    
-      <Link >
+      <Link to={`/purchaseFood/${_id}`}>
         <button className="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg">
           Purchase
         </button>

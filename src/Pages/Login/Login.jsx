@@ -2,11 +2,14 @@ import Lottie from 'lottie-react';
 import React from 'react';
 import lotLogin from '../../assets/signIn.json'
 import UseAuth from '../../Hooks/UseAuth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     const {loginUser,singInWithGoogle} = UseAuth();
+    const location = useLocation();
+    const from = location.state || '/';
+    const navigate = useNavigate();
 
 
     const handleSubmit=(e) =>{
@@ -19,6 +22,7 @@ const Login = () => {
             loginUser(email, password)
             .then(result =>{
                 console.log(result);
+                navigate(from);
             }).catch(error=>{
                 console.log(error)
             })
