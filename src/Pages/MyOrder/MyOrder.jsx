@@ -27,8 +27,8 @@ const MyOrder = () => {
           <tbody>
             {/* row 1 */}
             {
-                orders.map(order => <tr key={order._id}  className="bg-base-200">
-                    <th>1</th>
+                orders.map((order, idx) => <tr key={order._id}  className="bg-base-200">
+                    <th>{idx + 1}</th>
                     <td>{order.foodName}</td>
                     <td>{order.price}</td>
                     <td>{order.quantity}</td>

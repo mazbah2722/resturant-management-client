@@ -10,8 +10,8 @@ const SingleFood = () => {
       <h1 className='text-3xl font-bold mt-4'>Food Name : {foodName}</h1>
       <p className='text-lg font-semibold mt-2'>Quantity: {quantity}</p>
       <p className='text-lg font-semibold mt-2'>Price: {price} $</p>
-      <p className='text-lg font-semibold mt-2'>Ingredients: {description.ingredients}</p>
-      <p className='text-lg font-semibold mt-2'>MakingProcedure: {description.makingProcedure}</p>
+      <p className='text-lg font-semibold mt-2'>Description: {description}</p>
+      
    
       <Link to={`/purchaseFood/${_id}`}>
         <button className="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg">

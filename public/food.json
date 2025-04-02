@@ -10,10 +10,7 @@
         "email": "john@example.com"
       },
       "foodOrigin": "Italy",
-      "description": {
-        "ingredients": "Flour, Tomato, Mozzarella, Basil, Olive Oil",
-        "makingProcedure": "Prepare dough, add toppings, bake in oven."
-      }
+      "description": "Prepare dough, add toppings, bake in oven."
     },
     {
       "foodName": "Sushi",
@@ -26,10 +23,7 @@
         "email": "jane@example.com"
       },
       "foodOrigin": "Japan",
-      "description": {
-        "ingredients": "Rice, Fish, Seaweed, Soy Sauce",
-        "makingProcedure": "Roll sushi with ingredients, slice, and serve."
-      }
+      "description": "Roll sushi with ingredients, slice, and serve."
     },
     {
       "foodName": "Tacos",
@@ -42,10 +36,7 @@
         "email": "carlos@example.com"
       },
       "foodOrigin": "Mexico",
-      "description": {
-        "ingredients": "Tortilla, Meat, Lettuce, Cheese, Salsa",
-        "makingProcedure": "Fill tortilla with ingredients, fold, and serve."
-      }
+      "description":"Fill tortilla with ingredients, fold, and serve."
     },
     {
       "foodName": "Butter Chicken",
@@ -58,10 +49,7 @@
         "email": "amit@example.com"
       },
       "foodOrigin": "India",
-      "description": {
-        "ingredients": "Chicken, Tomato, Cream, Butter, Spices",
-        "makingProcedure": "Cook chicken in sauce with spices and butter."
-      }
+      "description": "Cook chicken in sauce with spices and butter."
     },
     {
       "foodName": "Burger",
@@ -74,10 +62,7 @@
         "email": "emma@example.com"
       },
       "foodOrigin": "United States",
-      "description": {
-        "ingredients": "Bun, Patty, Lettuce, Tomato, Cheese",
-        "makingProcedure": "Grill patty, assemble ingredients, and serve."
-      }
+      "description": "Grill patty, assemble ingredients, and serve."
     },
     {
       "foodName": "Paella",
@@ -90,10 +75,7 @@
         "email": "pedro@example.com"
       },
       "foodOrigin": "Spain",
-      "description": {
-        "ingredients": "Rice, Seafood, Saffron, Vegetables",
-        "makingProcedure": "Cook rice with seafood and spices."
-      }
+      "description": "Cook rice with seafood and spices."
     },
     {
       "foodName": "Dim Sum",
@@ -106,10 +88,7 @@
         "email": "li@example.com"
       },
       "foodOrigin": "China",
-      "description": {
-        "ingredients": "Dough, Meat, Vegetables, Soy Sauce",
-        "makingProcedure": "Steam or fry dumplings with fillings."
-      }
+      "description": "Steam or fry dumplings with fillings."
     },
     {
       "foodName": "Croissant",
@@ -122,10 +101,7 @@
         "email": "sophie@example.com"
       },
       "foodOrigin": "France",
-      "description": {
-        "ingredients": "Flour, Butter, Sugar, Yeast",
-        "makingProcedure": "Layer dough with butter, bake until golden."
-      }
+      "description": "Layer dough with butter, bake until golden."
     },
     {
       "foodName": "Shawarma",
@@ -138,10 +114,7 @@
         "email": "omar@example.com"
       },
       "foodOrigin": "Middle East",
-      "description": {
-        "ingredients": "Meat, Pita Bread, Garlic Sauce, Vegetables",
-        "makingProcedure": "Grill meat, wrap in pita with toppings."
-      }
+      "description": "Grill meat, wrap in pita with toppings."
     },
     {
       "foodName": "Pasta Carbonara",
@@ -154,10 +127,7 @@
         "email": "luca@example.com"
       },
       "foodOrigin": "Italy",
-      "description": {
-        "ingredients": "Pasta, Eggs, Cheese, Bacon, Black Pepper",
-        "makingProcedure": "Cook pasta, mix with sauce and bacon."
-      }
+      "description": "Cook pasta, mix with sauce and bacon."
     }
   ]
   

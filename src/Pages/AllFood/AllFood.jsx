@@ -10,7 +10,7 @@ const AllFood = () => {
     fetch("http://localhost:5000/restaurants")
       .then((res) => res.json())
       .then((data) => setFoods(data))
-      
+
   }, []);
 
   // Filter foods based on search
@@ -49,7 +49,9 @@ const AllFood = () => {
                 <h2 className="text-xl font-semibold">{food.foodName}</h2>
                 <p className="text-gray-600">Category: {food.foodCategory}</p>
                 <p className="text-gray-700 font-semibold">Quantity: {food.quantity}</p>
-                <p className="text-green-600 font-bold">${food.price.toFixed(2)}</p>
+                <p className="text-green-600 font-bold">
+                  ${parseFloat(food?.price || 0).toFixed(2)}
+                </p>
                 <Link to={`/singleFood/${food._id}`}>
                   <button className="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg">
                     View Details
