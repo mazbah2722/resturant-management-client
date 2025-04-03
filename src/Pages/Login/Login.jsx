@@ -4,9 +4,10 @@ import lotLogin from '../../assets/signIn.json'
 import UseAuth from '../../Hooks/UseAuth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const Login = () => {
-    const {loginUser,singInWithGoogle} = UseAuth();
+    const {loginUser,singInWithGoogle,setUser} = UseAuth();
     const location = useLocation();
     const from = location.state || '/';
     const navigate = useNavigate();
@@ -21,7 +22,12 @@ const Login = () => {
 
             loginUser(email, password)
             .then(result =>{
-                console.log(result);
+                // console.log(result);
+                const user = result.user;
+                     console.log(user);
+                     setUser(user);
+                     toast("Login successfully!")
+                     
                 navigate(from);
             }).catch(error=>{
                 console.log(error)
@@ -32,7 +38,8 @@ const Login = () => {
         singInWithGoogle()
             .then(result => {
                 console.log(result.user);
-                // navigate("/");
+                navigate("/");
+                toast("Login successfully!")
             })
             .catch(error => {
                 console.log('ERROR', error.message);

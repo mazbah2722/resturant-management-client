@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const AddFood = () => {
 
@@ -17,7 +18,17 @@ const AddFood = () => {
         })
         .then(res => res.json())
         .then(data => {
-          console.log(data)
+          console.log(data);
+          if(data.insertedId){
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Successfully  Add",
+              showConfirmButton: false,
+              timer: 1500
+            });
+
+          }
         })
     }
     return (

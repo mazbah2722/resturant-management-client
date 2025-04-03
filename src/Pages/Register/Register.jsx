@@ -1,31 +1,58 @@
 import Lottie from 'lottie-react';
 import lotLogin from '../../assets/register.json'
 import UseAuth from '../../Hooks/UseAuth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { toast } from 'react-toastify';
+import { useState } from 'react';
+
+
 
 const Register = () => {
-    const {createUser, setUser} = UseAuth();
+    const {createUser,setUser,updateUserProfile} = UseAuth();
+    const navigate = useNavigate();
+     const [errorMsg, setErrorMsg] = useState('');
+     
+
+
     const handleRegisterSubmit=(e) =>{
         e.preventDefault();
         const form = new FormData(e.target);
         const name = form.get("name");
-        const photoUrl = form.get("photo");
+        const photo = form.get("photo");
         const email = form.get("email");
         const password = form.get("password");
-
-        console.log(name, photoUrl, email, password);
+        setErrorMsg('');
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+        if (!passwordRegex.test(password)) {
+            setErrorMsg('At least one upper case,one lower case and Six character');
+            return;
+        }
+        console.log(name, photo, email, password);
         createUser(email, password)
         .then(result =>{
             const user = result.user;
+           
             console.log(user);
-
             setUser(user);
-            form.reset();
+
+            navigate('/');
+            toast('Register Successfully');
+
+            updateUserProfile({displayName:name, photoURL:photo})
+                .then(() =>{
+                    navigate("/");
+                }).catch(err =>{
+                    console.log(err);
+                })
+             
         })
         .catch(error =>{
             console.log(error);
-        })
+            setUser(null);
+        });
 
+     
 
 }
     return (
@@ -42,11 +69,15 @@ const Register = () => {
                                     <label className="fieldset-label">Name</label>
                                     <input name='name' type="text" className="input" placeholder="Name" />
                                     <label className="fieldset-label">Photo Url</label>
-                                    <input name='photoUrl' type="url" className="input" placeholder="Photo Url" />
+                                    <input name='photo' type="url" className="input" placeholder="Photo Url" />
                                     <label className="fieldset-label">Email</label>
                                     <input name='email' type="email" className="input" placeholder="Email" />
                                     <label className="fieldset-label">Password</label>
                                     <input name='password' type="password" className="input" placeholder="Password" />
+
+                                    {
+                                errorMsg && <p className="text-center text-red-600 ">{errorMsg}</p>
+                            }
                                    
                                     <button className="btn bg-red-500 text-white mt-4">Register</button>
                                 </fieldset>

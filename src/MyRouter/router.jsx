@@ -13,11 +13,12 @@ import Gallery from "../Pages/Gallery/Gallery";
 import PrivateRoute from "./PrivateRoute";
 import PurchasePage from "../Pages/PurchasePage/PurchasePage";
 import MyOrder from "../Pages/MyOrder/MyOrder";
+import Error from "../Pages/Error/Error";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:  <h2>Error</h2>,
+    errorElement:  <Error></Error>,
     children: [
         {
             path:'/',

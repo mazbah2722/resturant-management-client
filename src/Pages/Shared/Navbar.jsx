@@ -2,27 +2,28 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import UseAuth from '../../Hooks/UseAuth';
 import logo from '../../assets/icon.png'
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
 
-    const {user,singOutUser} = UseAuth();
+    const { user, singOutUser } = UseAuth();
     const links = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/allFood'}>All Foods</NavLink></li>
         <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
         <li><NavLink to={'/addFood'}>Add Food</NavLink></li>
         <li><NavLink to={'/myOrder'}>My Order</NavLink></li>
-       
-     
+
+
     </>
 
-    const handleSingOut=()=>{
+    const handleSingOut = () => {
         singOutUser()
-        .then(result => {
-            console.log(result);
-        }).catch(error =>{
-            console.log(error);
-        })
+            .then(result => {
+                console.log(result);
+            }).catch(error => {
+                console.log(error);
+            })
     }
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -34,11 +35,11 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                       {links}
+                        {links}
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl"> <img className='w-8' src={logo} alt="" /> Mz Restaurant </a>
-                
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -46,11 +47,16 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <div className="mr-4">
+                    {
+                        user ? <div className="flex flex-col gap-2"><img className="w-[40px] h-[40px] rounded-full" src={user?.photoURL} alt="img" /> <h1 className="text-xl font-semibold">{user?.displayName}</h1></div> : <FaUserCircle className="text-4xl mr-2" />
+                    }
+                </div>
                 <div>
                     {
                         user ? <button className='btn bg-red-500 text-white' onClick={handleSingOut}>SignOut</button> : <><div>
-                        <Link to={"/login"} className="btn mr-2 bg-green-500 text-white">Login</Link>
-                        <Link to={"/register"} className="btn bg-red-500 text-white">Register</Link>
+                            <Link to={"/login"} className="btn mr-2 bg-green-500 text-white">Login</Link>
+                            <Link to={"/register"} className="btn bg-red-500 text-white">Register</Link>
                         </div></>
                     }
                 </div>
