@@ -7,12 +7,12 @@ import { FaUserCircle } from "react-icons/fa";
 const Navbar = () => {
 
     const { user, singOutUser } = UseAuth();
+
     const links = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/allFood'}>All Foods</NavLink></li>
         <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
-        <li><NavLink to={'/addFood'}>Add Food</NavLink></li>
-        <li><NavLink to={'/myOrder'}>My Order</NavLink></li>
+       
 
 
     </>
@@ -49,7 +49,22 @@ const Navbar = () => {
             <div className="navbar-end">
                 <div className="mr-4">
                     {
-                        user ? <div className="flex flex-col gap-2"><img className="w-[40px] h-[40px] rounded-full" src={user?.photoURL} alt="img" /> <h1 className="text-xl font-semibold">{user?.displayName}</h1></div> : <FaUserCircle className="text-4xl mr-2" />
+                        user ? <div className="flex flex-col gap-2">
+                            
+
+                            <button className="" popoverTarget="popover-1" style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */}>
+                            <img className=" w-[40px] h-[40px] rounded-full" src={user?.photoURL} alt="img" />
+                                <h1 className="text-xl font-semibold">{user?.displayName}</h1>
+                            </button>
+
+                            <ul className="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
+                                popover="auto" id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */}>
+                                <li><NavLink to={'/addFood'}>Add Food</NavLink></li>
+                                <li><NavLink to={'/myOrder'}>My Order</NavLink></li>
+                                <li><NavLink to={'/myAddedFood'}>My Food</NavLink></li>
+                            </ul>
+
+                        </div> : <FaUserCircle className="text-4xl mr-2" />
                     }
                 </div>
                 <div>
